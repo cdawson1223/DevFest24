@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <head>
         <title>Where to live</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,11 +36,14 @@
         <form method="post" action="/submit">
             
             <div class="mb-3">
+
+
+                
             <label for="dropdown1">Size:</label>
             <select id="dropdown1" name="dropdown1">
-                <option value="Option 1">Small</option>
-                <option value="Option 2">Medium</option>
-                <option value="Option 3">Large</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
             </select>
             <br>
         </div>
@@ -48,9 +51,9 @@
             <div class="mb-3">
             <label for="dropdown2" >Weather:</label>
             <select id="dropdown2" name="dropdown2">
-                <option value="Option A">Cold</option>
-                <option value="Option B">Hot</option>
-                <option value="Option C">Don't Care</option>
+                <option value="Cold">Cold</option>
+                <option value="Hot">Hot</option>
+                <option value="Don't Care">Don't Care</option>
             </select>
             <br>
         </div>
@@ -59,10 +62,10 @@
             <div class="mb-3">
             <label for="dropdown3" >Cost of Living:</label>
             <select id="dropdown3" name="dropdown3">
-                <option value="Choice X">Very Important</option>
-                <option value="Choice Y">Moderately Important</option>
-                <option value="Choice Z">Mildy Important</option>
-                <option value="Choice W">Not Important</option>
+                <option value="Very Important">Very Important</option>
+                <option value="Moderately Important">Moderately Important</option>
+                <option value="Mildy Important">Mildy Important</option>
+                <option value="Not Important">Not Important</option>
             </select>
             <br>
         </div>
@@ -70,11 +73,11 @@
             <div class="mb-3">
             <label for="dropdown4" >Demographics:</label>
             <select id="dropdown4" name="dropdown4">
-                <option value="Item 1">Predominatly White</option>
-                <option value="Item 2">Predominatly Latino</option>
-                <option value="Item 3">Predominatly Black</option>
-                <option value="Item 4">Predominatly Asian</option>
-                <option value="Item 5">Mixed</option>
+                <option value="Predominatly White">Predominatly White</option>
+                <option value="Predominatly Hispanic">Predominatly Hispanic</option>
+                <option value="Predominatly Black">Predominatly Black</option>
+                <option value="Predominatly Asian">Predominatly Asian</option>
+                <option value="Mixed">Mixed</option>
             </select>
             <br>
         </div>
@@ -82,10 +85,10 @@
             <div class="mb-3">
             <label for="dropdown5" >Walkability:</label>
             <select id="dropdown5" name="dropdown5">
-                <option value="Cat X">Very Important</option>
-                <option value="Cat Y">Moderately Important</option>
-                <option value="Cat Z">Mildy Important</option>
-                <option value="Cat W">Not Important</option>
+                <option value="Very Important">Very Important</option>
+                <option value="Moderately Important">Moderately Important</option>
+                <option value="Mildy Important">Mildy Important</option>
+                <option value="Not Important">Not Important</option>
             </select>
             <br>
         </div>
@@ -93,10 +96,10 @@
             <div class="mb-3">
             <label for="dropdown6" >Safety:</label>
             <select id="dropdown6" name="dropdown6">
-                <option value="Ct X">Very Important</option>
-                <option value="Ct Y">Moderately Important</option>
-                <option value="Ct Z">Mildy Important</option>
-                <option value="Ct W">Not Important</option>
+                <option value="Very Important">Very Important</option>
+                <option value="Moderately Important">Moderately Important</option>
+                <option value="Mildy Important">Mildy Important</option>
+                <option value="Not Important">Not Important</option>
             </select>
             <br>
         </div>
@@ -104,15 +107,15 @@
             <div class="mb-3">
             <label for="dropdown7" >Public Transportation:</label>
             <select id="dropdown7" name="dropdown7">
-                <option value="C X">Very Important</option>
-                <option value="C Y">Moderately Important</option>
-                <option value="C Z">Mildy Important</option>
-                <option value="C W">Not Important</option>
+                <option value="Very Important">Very Important</option>
+                <option value="Moderately Important">Moderately Important</option>
+                <option value="Mildy Important">Mildy Important</option>
+                <option value="Not Important">Not Important</option>
             </select>
             <br>
         </div>
     
-            <button type="submit">Submit</button>
+            <button type="submit" name="submitButton" value="clicked">Submit</button>
         </form>
         </div>
     </body>
