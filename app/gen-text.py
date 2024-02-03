@@ -28,6 +28,7 @@ def main():
 
     for i in range(1, 201):
         file_name = f"demographic-data/Demographics_{i}.txt"
+        print(len(cities))
         generate_file(file_name, cities, states)
 
 if __name__ == "__main__":
