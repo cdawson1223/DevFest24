@@ -1,0 +1,50 @@
+In New York, the Hispanic is thriving, while there are few White.
+In Los Angeles, the Hispanic is thriving, while there are few Asian.
+In Chicago, the White is thriving, while there are few Black.
+In Houston, the White is thriving, while there are few Asian.
+In Phoenix, the Hispanic is thriving, while there are few Hispanic.
+In Philadelphia, the Hispanic is thriving, while there are few White.
+In San Antonio, the Black is thriving, while there are few Asian.
+In San Diego, the Hispanic is thriving, while there are few White.
+In Dallas, the Hispanic is thriving, while there are few Black.
+In Detroit, the Hispanic is thriving, while there are few Asian.
+In Jacksonville, the White is thriving, while there are few Asian.
+In Indianapolis, the White is thriving, while there are few Black.
+In Columbus, the Black is thriving, while there are few White.
+In Austin, the Asian is thriving, while there are few Hispanic.
+In Charlotte, the White is thriving, while there are few Asian.
+In Memphis, the Asian is thriving, while there are few Black.
+In Baltimore, the Hispanic is thriving, while there are few Asian.
+In Boston, the Black is thriving, while there are few Hispanic.
+In Seattle, the Asian is thriving, while there are few Hispanic.
+In Denver, the Hispanic is thriving, while there are few Asian.
+In Nashville, the White is thriving, while there are few White.
+In Milwaukee, the Asian is thriving, while there are few Hispanic.
+In Portland, the Asian is thriving, while there are few Black.
+In Oklahoma City, the White is thriving, while there are few Hispanic.
+In Las Vegas, the Black is thriving, while there are few Hispanic.
+In Louisville, the White is thriving, while there are few Black.
+In Birmingham, the Hispanic is thriving, while there are few Hispanic.
+In Raleigh, the White is thriving, while there are few White.
+In Richmond, the Asian is thriving, while there are few Asian.
+In Hartford, the White is thriving, while there are few Hispanic.
+In New Orleans, the Black is thriving, while there are few Black.
+In Buffalo, the Black is thriving, while there are few White.
+In Rochester, the Hispanic is thriving, while there are few Black.
+In Salt Lake City, the White is thriving, while there are few Black.
+In Grand Rapids, the Asian is thriving, while there are few Black.
+In Tucson, the White is thriving, while there are few Black.
+In Tulsa, the Black is thriving, while there are few Hispanic.
+In Fresno, the White is thriving, while there are few White.
+In Wichita, the Asian is thriving, while there are few Hispanic.
+In Albuquerque, the Black is thriving, while there are few Hispanic.
+In Omaha, the Asian is thriving, while there are few White.
+In Bakersfield, the Hispanic is thriving, while there are few Asian.
+In Knoxville, the Asian is thriving, while there are few Black.
+In Tampa, the Hispanic is thriving, while there are few White.
+In Aurora, the Hispanic is thriving, while there are few White.
+In Santa Ana, the Asian is thriving, while there are few White.
+In Pittsburgh, the Asian is thriving, while there are few White.
+In Cincinnati, the Black is thriving, while there are few Black.
+In Anchorage, the White is thriving, while there are few Hispanic.
+In Toledo, the Asian is thriving, while there are few Asian.
