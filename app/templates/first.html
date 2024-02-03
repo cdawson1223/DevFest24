@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Where to live</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+        body {
+            /* Set background image and properties */
+            /*background-image: url('nycskyline.jpeg');*/ /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+            background-image: url("{{ url_for('static', filename='nycskyline.jpg') }}");
+            background-size: cover; /* Adjust as needed: cover, contain, or a specific size */
+            background-position: center center; /* Adjust as needed: center center, top left, etc. */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            height: 100vh; /* Set the height to the full viewport height */
+            margin: 0; /* Remove default margin */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black; /* Set text color to contrast with the background */
+        }
+        label {
+            color: purple;
+        }
+        /* Add additional styling as needed */
+
+    </style>
+    </head>
+    <div class="container mt-5" style="background-color: white;"></div>
+    <body>
+        <div class="container mt-5" style="background-color: white;color: black;">
+        <h1>Hello, Welcome to pick a location to live!</h1>
+        <h5>This platform allows for you to input what you want for where you live. Simply use the dropdowns for each category, and our algorithm will tell you the best place to live!</h2> 
+        </div>
+        <div class="container mt-5">
+        <form method="post" action="/submit">
+            
+            <div class="mb-3">
+            <label for="dropdown1">Size:</label>
+            <select id="dropdown1" name="dropdown1">
+                <option value="Option 1">Small</option>
+                <option value="Option 2">Medium</option>
+                <option value="Option 3">Large</option>
+            </select>
+            <br>
+        </div>
+            
+            <div class="mb-3">
+            <label for="dropdown2" >Weather:</label>
+            <select id="dropdown2" name="dropdown2">
+                <option value="Option A">Cold</option>
+                <option value="Option B">Hot</option>
+                <option value="Option C">Don't Care</option>
+            </select>
+            <br>
+        </div>
+            
+
+            <div class="mb-3">
+            <label for="dropdown3" >Cost of Living:</label>
+            <select id="dropdown3" name="dropdown3">
+                <option value="Choice X">Very Important</option>
+                <option value="Choice Y">Moderately Important</option>
+                <option value="Choice Z">Mildy Important</option>
+                <option value="Choice W">Not Important</option>
+            </select>
+            <br>
+        </div>
+    
+            <div class="mb-3">
+            <label for="dropdown4" >Demographics:</label>
+            <select id="dropdown4" name="dropdown4">
+                <option value="Item 1">Predominatly White</option>
+                <option value="Item 2">Predominatly Latino</option>
+                <option value="Item 3">Predominatly Black</option>
+                <option value="Item 4">Predominatly Asian</option>
+                <option value="Item 5">Mixed</option>
+            </select>
+            <br>
+        </div>
+    
+            <div class="mb-3">
+            <label for="dropdown5" >Walkability:</label>
+            <select id="dropdown5" name="dropdown5">
+                <option value="Cat X">Very Important</option>
+                <option value="Cat Y">Moderately Important</option>
+                <option value="Cat Z">Mildy Important</option>
+                <option value="Cat W">Not Important</option>
+            </select>
+            <br>
+        </div>
+
+            <div class="mb-3">
+            <label for="dropdown6" >Safety:</label>
+            <select id="dropdown6" name="dropdown6">
+                <option value="Ct X">Very Important</option>
+                <option value="Ct Y">Moderately Important</option>
+                <option value="Ct Z">Mildy Important</option>
+                <option value="Ct W">Not Important</option>
+            </select>
+            <br>
+        </div>
+            
+            <div class="mb-3">
+            <label for="dropdown7" >Public Transportation:</label>
+            <select id="dropdown7" name="dropdown7">
+                <option value="C X">Very Important</option>
+                <option value="C Y">Moderately Important</option>
+                <option value="C Z">Mildy Important</option>
+                <option value="C W">Not Important</option>
+            </select>
+            <br>
+        </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </body>
+    
+</html>
