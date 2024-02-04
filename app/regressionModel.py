@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
+import numpy as np 
 
 
 
@@ -70,7 +71,7 @@ def read_files(train_dir):
     return cities
 
 
-def regression():
+def regression(user_input):
     
     city_demo_data = read_files("demographic-data")
     
@@ -81,15 +82,29 @@ def regression():
     
     df["City"] = [i for i in range(1, 51)]
     
+    np.random.seed(42)
+
+# Create a DataFrame with random numbers
+    data = {
+        'Size': np.random.uniform(-0.5, 0.5, 50),
+        'Weather': np.random.uniform(-0.5, 0.5, 50),
+        'Cost of Living': np.random.uniform(-0.5, 0.5, 50),
+        'Walkability': np.random.uniform(-0.5, 0.5, 50),
+        'Safety': np.random.uniform(-0.5, 0.5, 50),
+        'Public Transportation': np.random.uniform(-0.5, 0.5, 50)
+    }
+
+    df2 = pd.DataFrame(data)
+
     # add the data
     for group in groups:
         df[group] = [city_demo_data[city][group] for city in city_demo_data]
     
-    
+    df = pd.merge(df, df2)
     df.style
     
     # Split the data into training and testing sets
-    X = df[['Asian', 'Black', 'White', "Hispanic"]]  # Include all the predictor variables you have
+    X = df[['Asian', 'Black', 'White', "Hispanic", "Size", "Weather", "Cost of Living", "Walkability", "Safety", "Public Transportation"]]  # Include all the predictor variables you have
     y = df['City']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.01, random_state=42)
@@ -105,12 +120,12 @@ def regression():
     # print("Intercept:", model.intercept_)
 
     # # Make predictions on the test data
-    # predictions = model.predict(X_test)
+    prediction = model.predict(user_input)
 
     # # Evaluate the performance
-    # mse = mean_squared_error(y_test, predictions)
+    #mse = mean_squared_error(y_test, predictions)
     # print("Mean Squared Error:", mse)
-        
+    return prediction
 
 if __name__ == "__main__":
     regression()
