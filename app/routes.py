@@ -9,7 +9,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-#import numpy as np 
+import numpy as np 
 
 @app.route('/')
 @app.route('/index')
@@ -45,21 +45,25 @@ def submit():
         else: #mixed
             my_list = [0,0,0,0,size,weather, cost, walkability, safety, public_transportation]
         
-        prediction = regression(my_list)
-        print(prediction)
+        prediction,option2, option3 = regression(my_list)
+        #print(prediction)
+        #id = int(prediction)
+        #state = id 
         #return redirect(url_for('destination',parameters = my_list))
-        return render_template('output.html', title='Home', my_list=my_list)
+        return render_template('output.html', title='Home', state=prediction,option2=option2,option3=option3)
     return render_template('first.html', title='Home')
 
 
-def read_files(train_dir):
-
+#def read_files(train_dir):
+def read_files():
     # create the count for each city
     cities = dict()
 
-    for f in os.listdir(train_dir):
+    #for f in os.listdir(train_dir):
+    for f in range(1,201):
         print(f)
-        filename = train_dir + "/" + f
+        #filename = train_dir + "/" + f
+        filename = "app\Demographics_" + str(f) + ".txt"
         print(filename)
         with open(filename, "r") as my_file:
 
@@ -111,10 +115,14 @@ def read_files(train_dir):
 
 def regression(user_input):
     
-    city_demo_data = read_files("demographic-data")
-    
+    #city_demo_data = read_files("demographic_data")
+    city_demo_data = read_files()
     city_value = 1
-    
+    #print(city_demo_data)
+    city_key_arr = []
+    for key in city_demo_data:
+        city_key_arr.append(key)
+    #print(city_key_arr)
     df = pd.DataFrame()
     groups = ["Asian", "Black", "White", "Hispanic"]
     
@@ -138,7 +146,7 @@ def regression(user_input):
     for group in groups:
         df[group] = [city_demo_data[city][group] for city in city_demo_data]
     
-    df = pd.merge(df, df2)
+    df = pd.concat([df, df2],axis=1)
     df.style
     
     # Split the data into training and testing sets
@@ -158,12 +166,24 @@ def regression(user_input):
     # print("Intercept:", model.intercept_)
 
     # # Make predictions on the test data
-    prediction = model.predict(user_input)
+    user = np.array(user_input)
+    prediction = model.predict(user.reshape(1, -1))
+    #subtract by 1 cause cities are 1 indexed while the array is 0 indexed 
+    val = int(prediction)
+    city = city_key_arr[val-1]
+    if val == 1: #make option2, the 2nd indexed 
+        option2 = city_key_arr[2]
+    else:
+        option2 = city_key_arr[val-2]
+    if val == len(city_key_arr):#for option 3 
+        option3 = city_key_arr[val-3]
+    else:
+        option3 = city_key_arr[val]
 
-    # # Evaluate the performance
+    # # Evaluate the performance.reshape(1, -1)
     #mse = mean_squared_error(y_test, predictions)
     # print("Mean Squared Error:", mse)
-    return prediction
+    return city,option2, option3
 
 
     
